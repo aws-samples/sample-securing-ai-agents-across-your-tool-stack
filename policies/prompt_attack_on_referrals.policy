@@ -1,0 +1,5 @@
+// PromptAttackOnReferrals (M5c): withhold partner referrals when the prompt-attack check flags them.
+suppressOutput (principal, action == AgentCore::Action::"Partner___partner_list_referrals", resource is AgentCore::Gateway)
+when guardrails {
+  BedrockGuardrails::PromptAttack(["PROMPT_INJECTION"], [context.output.digest]).maxConfidenceScore().greaterThanOrEqual(decimal("0.4"))
+};

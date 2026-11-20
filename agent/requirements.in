@@ -1,0 +1,8 @@
+# Top-level agent dependencies. scripts/build_agent.sh compiles the full pinned set into requirements.txt
+# for Linux arm64 and Python 3.12 (AgentCore Runtime direct code deployment) and bundles it with the agent code.
+strands-agents==1.64.0
+mcp==2.2.0
+bedrock-agentcore==1.24.0
+# Security floors for transitive dependencies (fixed versions of published advisories).
+certifi==2026.10.23
+opentelemetry-api==1.45.2

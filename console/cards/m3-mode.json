@@ -1,0 +1,19 @@
+{
+  "id": "m3-mode",
+  "menu": 9,
+  "stage": "3",
+  "show_in": "3",
+  "order": 1,
+  "fallback": false,
+  "clip": null,
+  "kind": "switch",
+  "label": "DEMO SWITCH",
+  "button": "Act on behalf",
+  "title": "Moment 3 · Deputy mode: act on behalf",
+  "desc": "The request interceptor reads this flag per call. In production, act on behalf stays on.",
+  "argv": ["scripts/steps/m3_mode.py", "act_on_behalf"],
+  "excerpts": [
+    {"file": "m3-mode.py", "key": "gk.ssm_put("},
+    {"file": "req-mode-flag.py", "note": "what reads the flag"}
+  ]
+}

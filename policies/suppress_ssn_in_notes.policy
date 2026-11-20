@@ -1,0 +1,5 @@
+// SuppressSsnInNotes: withhold a notes result when the SensitiveInformation check finds an SSN.
+suppressOutput (principal, action == AgentCore::Action::"MemberRecords___get_member_notes", resource is AgentCore::Gateway)
+when guardrails {
+  BedrockGuardrails::SensitiveInformation(["US_SOCIAL_SECURITY_NUMBER"], [context.output.notes_text]).maxConfidenceScore().greaterThan(decimal("0.2"))
+};

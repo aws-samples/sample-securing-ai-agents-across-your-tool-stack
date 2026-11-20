@@ -1,0 +1,19 @@
+{
+  "id": "m5c-guardrail",
+  "menu": 13,
+  "stage": "5b",
+  "show_in": "5a",
+  "order": 2,
+  "fallback": false,
+  "clip": "05",
+  "kind": "stand-in",
+  "label": "STAND-IN + DEMO SWITCH",
+  "button": "R-2003 + guard",
+  "title": "Moment 5b · Prompt guard on",
+  "desc": "Plays the partner publishing R-2003. In production, the prompt guard stays on.",
+  "argv": ["scripts/steps/m5c_guardrail.py"],
+  "excerpts": [
+    {"file": "m5c-guardrail.py", "key": "gk.ssm_put("},
+    {"file": "resp-guard-flag.py", "note": "what reads the flag"}
+  ]
+}

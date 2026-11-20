@@ -1,0 +1,20 @@
+{
+  "id": "m4-mask",
+  "menu": 10,
+  "stage": "4",
+  "show_in": "4",
+  "order": 1,
+  "fallback": false,
+  "clip": null,
+  "kind": "switch",
+  "label": "DEMO SWITCH",
+  "button": "Masking on",
+  "title": "Moment 4 · Masking on",
+  "desc": "The response interceptor reads this flag on every tool result. In production, masking stays on.",
+  "argv": ["scripts/steps/m4_mask.py"],
+  "excerpts": [
+    {"file": "m4-mask.py", "key": "gk.ssm_put("},
+    {"file": "gklib-ssm-put.py"},
+    {"file": "resp-mask-flag.py", "note": "what reads the flag"}
+  ]
+}

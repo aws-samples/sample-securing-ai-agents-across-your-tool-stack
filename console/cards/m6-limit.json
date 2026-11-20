@@ -1,0 +1,19 @@
+{
+  "id": "m6-limit",
+  "menu": 16,
+  "stage": "6",
+  "show_in": "6",
+  "order": 2,
+  "fallback": false,
+  "clip": "08",
+  "kind": "api",
+  "label": "AGENTCORE API CALL",
+  "button": "Limit to 2/s",
+  "title": "Moment 6 · Rate limit: 2/s per staff member",
+  "desc": "Calls UpdateGatewayRateLimit, then waits 35 s for the change to spread.",
+  "argv": ["scripts/steps/m6_limit.py"],
+  "excerpts": [
+    {"file": "m6-limit.py"},
+    {"file": "gklib-rate-limit.py", "note": "rate_limit()", "key": "\"rate\": set_to"}
+  ]
+}

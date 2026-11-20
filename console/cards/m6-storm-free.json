@@ -1,0 +1,20 @@
+{
+  "id": "m6-storm-free",
+  "menu": 15,
+  "stage": "6",
+  "show_in": "6",
+  "order": 1,
+  "fallback": false,
+  "clip": null,
+  "kind": "stand-in",
+  "label": "STAND-IN",
+  "button": "Storm with no limit",
+  "title": "Moment 6 · Storm with no limit",
+  "desc": "Plays Maya's runaway script: 4 account reads a second. In production, a looping agent does this.",
+  "argv": ["scripts/steps/m6_storm.py", "12", "--expect", "free"],
+  "wide_output": true,
+  "excerpts": [
+    {"file": "m6-storm-rps.py"},
+    {"file": "m6-storm-threads.py", "note": "4 workers as Maya, 1 as Leo", "key": "args=(maya, WORKERS / RPS, False)"}
+  ]
+}

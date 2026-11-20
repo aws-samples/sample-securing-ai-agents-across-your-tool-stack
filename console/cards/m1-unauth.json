@@ -1,0 +1,19 @@
+{
+  "id": "m1-unauth",
+  "menu": 3,
+  "stage": "1",
+  "show_in": "",
+  "order": 1,
+  "fallback": false,
+  "clip": "00",
+  "kind": "stand-in",
+  "label": "STAND-IN",
+  "button": "Front door check",
+  "title": "Moment 1 · Front door check",
+  "desc": "Plays three callers with no valid staff token. In production, the same front door turns them away.",
+  "argv": ["scripts/steps/m1_unauth.py"],
+  "excerpts": [
+    {"file": "m1-unauth-callers.py", "note": "three callers"},
+    {"file": "m1-unauth-probe.py", "note": "each tries two calls", "key": "m.call("}
+  ]
+}

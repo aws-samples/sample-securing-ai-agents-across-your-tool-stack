@@ -1,0 +1,19 @@
+{
+  "id": "m2-disconnect",
+  "menu": 6,
+  "stage": "2",
+  "show_in": "2",
+  "order": 1,
+  "fallback": false,
+  "clip": null,
+  "kind": "api",
+  "label": "AGENTCORE API CALL",
+  "button": "Disconnect Maya",
+  "title": "Moment 2 · Disconnect Maya",
+  "desc": "One Gateway call as Maya, with forceAuthentication, removes her partner token. Leo keeps his.",
+  "argv": ["scripts/steps/m2_disconnect.py"],
+  "excerpts": [
+    {"file": "m2-disconnect.py"},
+    {"file": "reset-force-auth.py", "note": "partner_call() in the reset function", "key": "\"forceAuthentication\": True"}
+  ]
+}

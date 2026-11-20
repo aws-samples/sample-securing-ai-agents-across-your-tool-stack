@@ -1,0 +1,19 @@
+{
+  "id": "m2-reconnect-maya",
+  "menu": 8,
+  "stage": "2",
+  "show_in": "2",
+  "order": 3,
+  "fallback": false,
+  "clip": "02",
+  "kind": "stand-in",
+  "label": "STAND-IN",
+  "button": "Reconnect Maya",
+  "title": "Moment 2 · Maya connects again",
+  "desc": "Plays Maya connecting again, for Moment 5a. In production, staff consent in their browser.",
+  "argv": ["scripts/consent_login.py", "maya"],
+  "excerpts": [
+    {"file": "consent-staff.py", "note": "staff sign-in on the portal"},
+    {"file": "consent-partner.py", "note": "Connect, then partner sign-in", "key": "gk.password(\"partner\", user)"}
+  ]
+}

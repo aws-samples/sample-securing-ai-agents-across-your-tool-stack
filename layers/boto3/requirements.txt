@@ -1,0 +1,9 @@
+# The gk-boto3 Lambda layer (Python 3.12, arm64): a boto3 with the AgentCore control-plane APIs the custom resources
+# and the reset function call. Built by scripts/build_layers.sh into layers/boto3/python/ (git-ignored).
+boto3==1.43.103
+botocore==1.43.103
+jmespath==1.1.0
+python-dateutil==2.9.0.post0
+s3transfer==0.19.2
+six==1.17.0
+urllib3==2.8.0

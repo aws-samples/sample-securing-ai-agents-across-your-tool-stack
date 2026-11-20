@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+infra/cdk.out/
+cdk.out/
+logs/
+layers/*/python/
+layers/*/tmp-*/
+layers/*/old-*/
+.pytest_cache/
+agent/.build/
+.gk-local.json

@@ -1,0 +1,18 @@
+# Top-level dependencies of the local tools: the CDK app (infra/), the step scripts and the console (scripts/,
+# console/), and the tests. requirements.txt pins the full set (Python 3.12, all platforms).
+# The agent's own dependencies, bundled for AgentCore Runtime, are in agent/requirements.in.
+aws-cdk-lib==2.271.0
+constructs==10.8.1
+boto3==1.43.103
+requests==2.34.2
+fastapi==0.142.2
+uvicorn==0.54.0
+python-multipart==0.0.32
+strands-agents==1.64.0
+mcp==2.2.0
+bedrock-agentcore==1.24.0
+playwright==1.63.0
+pytest==9.0.3
+# Security floors for transitive dependencies (fixed versions of published advisories).
+certifi==2026.10.23
+opentelemetry-api==1.45.2

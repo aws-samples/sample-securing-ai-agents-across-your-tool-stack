@@ -1,0 +1,19 @@
+{
+  "id": "m4-guardrail",
+  "menu": 11,
+  "stage": "4",
+  "show_in": "4",
+  "order": 2,
+  "fallback": false,
+  "clip": null,
+  "kind": "api",
+  "label": "AGENTCORE API CALL",
+  "button": "SSN guardrail on",
+  "title": "Moment 4 · SSN guardrail: enforce",
+  "desc": "Moves the policy from log-only to enforce. This is the call you make in production.",
+  "argv": ["scripts/steps/m4_guardrail.py"],
+  "excerpts": [
+    {"file": "m4-guardrail.py"},
+    {"file": "gklib-update-policy.py", "note": "set_policy_mode()", "key": "enforcementMode=mode"}
+  ]
+}

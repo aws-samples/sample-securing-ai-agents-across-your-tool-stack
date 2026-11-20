@@ -1,0 +1,7 @@
+# The gk-pyjwt Lambda layer (Python 3.12, arm64): PyJWT with cryptography, for the tools function's check of a
+# forwarded staff JWT against the staff pool's JWKS. Built by scripts/build_layers.sh into layers/pyjwt/python/
+# (git-ignored).
+PyJWT==2.15.1
+cryptography==50.0.2
+cffi==2.1.1
+pycparser==3.0

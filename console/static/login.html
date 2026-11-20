@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Demo console: sign in</title>
+<style nonce="__NONCE__">
+  :root { --bg: #0d1117; --panel: #161b22; --text: #f0f3f6; --muted: #c9d1d9; --line: #30363d; --accent: #79c0ff; --denytext: #ffa198; --chiptext: #0b0f14; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text); font-family: "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; }
+  body { display: flex; align-items: center; justify-content: center; }
+  form { background: var(--panel); border: 2px solid var(--line); border-radius: 12px; padding: 36px 44px; width: 560px; font-size: 26px; }
+  h1 { font-size: 32px; margin: 0 0 8px; }
+  p { color: var(--muted); margin: 0 0 24px; font-size: 24px; }
+  label { display: block; margin: 16px 0 6px; }
+  input { width: 100%; box-sizing: border-box; font-size: 26px; padding: 10px; background: var(--bg); color: var(--text); border: 2px solid var(--line); border-radius: 8px; }
+  button { margin-top: 28px; font-size: 26px; padding: 10px 28px; background: var(--accent); color: var(--chiptext); border: 0; border-radius: 8px; font-weight: 700; cursor: pointer; }
+  .msg { color: var(--denytext); margin-top: 18px; min-height: 30px; }
+</style>
+</head>
+<body>
+<form method="post" action="/login" autocomplete="off">
+  <h1>Gatekeepers and guardrails</h1>
+  <p>Demo console. Presenter accounts only (staff pool, group presenter).</p>
+  <label for="username">Presenter user</label>
+  <input id="username" name="username" required autofocus>
+  <label for="password">Password</label>
+  <input id="password" name="password" type="password" required>
+  <button type="submit">Sign in</button>
+  <div class="msg" role="alert">__MESSAGE__</div>
+</form>
+</body>
+</html>

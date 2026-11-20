@@ -1,0 +1,8 @@
+// DestinationSeenInSession: a transfer is forbidden unless its destination was returned as
+// checking_ref or savings_ref by an account read for the same member in this policy session. Two unless-temporal
+// clauses, which Cedar ANDs (one clause per condition, rather than || between temporal predicates).
+forbid (principal, action == AgentCore::Action::"MemberRecords___initiate_transfer", resource is AgentCore::Gateway)
+unless temporal { formerly within 1h AgentCore::Action::"MemberRecords___get_member_accounts"::response{ eventResource: resource,
+    input.member_id: context.input.member_id, output.checking_ref: context.input.destination_ref } }
+unless temporal { formerly within 1h AgentCore::Action::"MemberRecords___get_member_accounts"::response{ eventResource: resource,
+    input.member_id: context.input.member_id, output.savings_ref: context.input.destination_ref } };

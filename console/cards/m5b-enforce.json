@@ -1,0 +1,19 @@
+{
+  "id": "m5b-enforce",
+  "menu": 14,
+  "stage": "5c",
+  "show_in": "5b",
+  "order": 1,
+  "fallback": false,
+  "clip": "06",
+  "kind": "api",
+  "label": "AGENTCORE API CALL",
+  "button": "Approval rule on",
+  "title": "Moment 5c · Approval rule: enforce",
+  "desc": "Moves the policy from log-only to enforce. This is the call you make in production.",
+  "argv": ["scripts/steps/m5b_enforce.py"],
+  "excerpts": [
+    {"file": "m5b-enforce.py"},
+    {"file": "gklib-update-policy.py", "note": "set_policy_mode()", "key": "enforcementMode=mode"}
+  ]
+}

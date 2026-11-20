@@ -1,0 +1,7 @@
+// ReadBurstPerSession: forbid an account read once the policy session made 20 of them in the last minute. Not deployed by the demo.
+forbid (principal, action == AgentCore::Action::"MemberRecords___get_member_accounts", resource is AgentCore::Gateway)
+when temporal {
+  (count for (t: Timepoint). where (
+    formerly within 1m (AgentCore::Action::"MemberRecords___get_member_accounts"::request{ eventResource: resource, input.member_id: _ } && tp(t))
+  )) >= 20
+};

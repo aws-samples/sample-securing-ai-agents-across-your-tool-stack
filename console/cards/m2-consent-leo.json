@@ -1,0 +1,19 @@
+{
+  "id": "m2-consent-leo",
+  "menu": 5,
+  "stage": "2",
+  "show_in": "2",
+  "order": 1,
+  "fallback": true,
+  "clip": null,
+  "kind": "stand-in",
+  "label": "STAND-IN",
+  "button": "Connect Leo by script",
+  "title": "Moment 2 · Leo connects by script",
+  "desc": "Plays Leo: staff sign-in, Connect, partner sign-in. In production, staff consent in their browser.",
+  "argv": ["scripts/consent_login.py", "leo"],
+  "excerpts": [
+    {"file": "consent-staff.py", "note": "staff sign-in on the portal"},
+    {"file": "consent-partner.py", "note": "Connect, then partner sign-in", "key": "gk.password(\"partner\", user)"}
+  ]
+}

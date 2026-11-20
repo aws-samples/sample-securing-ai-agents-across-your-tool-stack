@@ -1,0 +1,8 @@
+{
+  "app": "../.venv/bin/python app.py",
+  "context": {
+    "stacks": {},
+    "policy_gens": "2",
+    "policy_gen": "2"
+  }
+}
